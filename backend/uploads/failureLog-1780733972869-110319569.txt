@@ -1,0 +1,11 @@
+2025-06-07 02:00:01 [INFO] Pipeline: Nightly ETL Job started
+2025-06-07 02:00:02 [INFO] Loading configuration from config.yaml
+2025-06-07 02:00:03 [WARN] Database connection attempt 1/3 failed
+2025-06-07 02:00:03 [ERROR] TimeoutException: Connection to db-prod.internal:5432 timed out after 2000ms
+2025-06-07 02:00:04 [WARN] Retrying database connection (attempt 2/3)...
+2025-06-07 02:00:06 [ERROR] TimeoutException: Connection to db-prod.internal:5432 timed out after 2000ms
+2025-06-07 02:00:06 [WARN] Retrying database connection (attempt 3/3)...
+2025-06-07 02:00:08 [ERROR] TimeoutException: Connection to db-prod.internal:5432 timed out after 2000ms
+2025-06-07 02:00:08 [ERROR] Database Connection Failure: All 3 connection attempts failed
+2025-06-07 02:00:09 [ERROR] Pipeline aborted at Step 1: unable to establish database connection
+2025-06-07 02:00:09 [FATAL] Nightly ETL Job failed - exiting with code 1

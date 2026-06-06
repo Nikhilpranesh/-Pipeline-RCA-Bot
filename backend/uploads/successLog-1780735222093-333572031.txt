@@ -1,0 +1,16 @@
+2025-06-06 02:00:01 [INFO] Pipeline: Nightly ETL Job started
+2025-06-06 02:00:02 [INFO] Loading configuration from config.yaml
+2025-06-06 02:00:03 [INFO] Database connection established (host: db-prod.internal, port: 5432)
+2025-06-06 02:00:04 [INFO] Connection pool initialized: 10 connections, timeout=10s
+2025-06-06 02:00:05 [INFO] Step 1/5: Extracting data from source API
+2025-06-06 02:01:30 [INFO] Extracted 45,000 records from /api/v2/orders
+2025-06-06 02:01:31 [INFO] Step 2/5: Validating schema
+2025-06-06 02:01:35 [INFO] Schema validation passed: all 45,000 records valid
+2025-06-06 02:01:36 [INFO] Step 3/5: Transforming data
+2025-06-06 02:03:10 [INFO] Transformation complete: 45,000 records processed
+2025-06-06 02:03:11 [INFO] Step 4/5: Loading into data warehouse
+2025-06-06 02:04:45 [INFO] Load complete: 45,000 rows inserted into dw.fact_orders
+2025-06-06 02:04:46 [INFO] Step 5/5: Running data quality checks
+2025-06-06 02:05:00 [INFO] Data quality checks passed
+2025-06-06 02:05:01 [INFO] Sending notification: success
+2025-06-06 02:05:02 [INFO] Pipeline completed successfully in 5m 1s

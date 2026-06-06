@@ -1,0 +1,13 @@
+ERROR: Pipeline execution failed at 2024-06-06 11:45:00
+Fatal error in data transformation module
+Exception: NullPointerException at DataTransformer.js:45
+Caused by: undefined value in dataset mapping
+Stack trace:
+  at DataTransformer.transform (DataTransformer.js:45)
+  at Pipeline.execute (Pipeline.js:120)
+  at main (index.js:30)
+
+Additional context:
+- Input dataset size: 1.2GB
+- Memory usage: 85%
+- Processing time before failure: 2h 15m

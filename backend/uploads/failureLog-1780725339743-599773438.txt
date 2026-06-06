@@ -1,0 +1,24 @@
+RCA FAILURE LOG
+===============
+Timestamp: 2026-06-05 14:42:18
+Pipeline ID: PIPE-102
+Application: User-Management-Service
+
+Status: FAILURE
+
+Summary:
+Deployment pipeline failed during the build stage.
+
+Root Cause Analysis:
+Missing dependency caused compilation failure.
+
+Error Message:
+package org.springframework.mail does not exist
+
+Recommended Actions:
+1. Add the missing dependency.
+2. Rebuild the application.
+3. Rerun the pipeline.
+
+Resolution Status:
+Pending Developer Fix
