@@ -11,35 +11,54 @@ const { compareLogs } = require('../utils/logComparator');
 const generateReport = async (req, res) => {
   try {
     const { pipelineId } = req.body;
+    console.log('Generating RCA for pipeline:', pipelineId);
 
     const pipeline = await Pipeline.findById(pipelineId);
     if (!pipeline) {
+      console.log('Pipeline not found:', pipelineId);
       return res.status(404).json({ message: 'Pipeline not found' });
     }
 
     const log = await Log.findOne({ pipelineId }).sort({ uploadedAt: -1 });
     if (!log) {
+      console.log('No logs found for pipeline:', pipelineId);
       return res.status(400).json({ message: 'No logs found for this pipeline' });
     }
+
+    console.log('Log found:', log._id);
+    console.log('Success log path:', log.successLogPath);
+    console.log('Failure log path:', log.failureLogPath);
 
     let successLogData = '';
     let failureLogData = '';
 
     if (log.successLogPath && fs.existsSync(log.successLogPath)) {
       successLogData = fs.readFileSync(log.successLogPath, 'utf8');
+      console.log('Success log loaded, length:', successLogData.length);
+    } else {
+      console.log('Success log file not found or empty');
     }
     if (log.failureLogPath && fs.existsSync(log.failureLogPath)) {
       failureLogData = fs.readFileSync(log.failureLogPath, 'utf8');
+      console.log('Failure log loaded, length:', failureLogData.length);
+    } else {
+      console.log('Failure log file not found or empty');
     }
 
     // Git Analysis
+    console.log('Starting git analysis...');
     const gitDiff = await analyzeGitChanges(process.cwd());
+    console.log('Git analysis completed');
 
     // Log Comparison
+    console.log('Starting log comparison...');
     const logDifferences = compareLogs(successLogData, failureLogData);
+    console.log('Log comparison completed');
 
     // Generate RCA via Groq AI
+    console.log('Starting AI RCA generation...');
     const aiResponse = await generateRCA(failureLogData, successLogData, gitDiff);
+    console.log('AI RCA generation completed');
 
     // Save Report with new format
     const rcaReport = await RcaReport.create({
@@ -58,8 +77,10 @@ const generateReport = async (req, res) => {
     pipeline.status = 'FAILED';
     await pipeline.save();
 
+    console.log('RCA Report created with ID:', rcaReport._id);
     res.status(201).json(rcaReport);
   } catch (error) {
+    console.error('Error in generateReport:', error);
     res.status(500).json({ message: error.message });
   }
 };
