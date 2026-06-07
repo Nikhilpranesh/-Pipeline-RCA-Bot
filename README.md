@@ -27,7 +27,7 @@ Team 18
 
 ## Demo Video
 
-Demo Link: Add your Loom or YouTube video link here.
+Demo Link: https://www.loom.com/share/6210f4c5713a499fb4c504dfcc385abe
 
 ## GitHub Repository
 
@@ -545,7 +545,7 @@ Update ETL mapping configuration and retry pipeline.
 
 Demo Link:
 
-Add your video link here.
+https://www.loom.com/share/6210f4c5713a499fb4c504dfcc385abe
 
 The demonstration includes:
 
@@ -569,6 +569,6 @@ Pipeline Failure RCA Bot successfully automates root cause analysis by combining
 
 # 👨‍💻 Developed By
 
-Team Number – 31
+Team Number – 18
 
 Project: Pipeline Failure RCA Bot
