@@ -132,8 +132,7 @@ Install the following:
 STEP 1: CLONE REPOSITORY
 ----------------------------------------------------------
 
-git clone https://github.com/your-username/pipeline-failure-rca-bot.git
-
+git clone https://github.com/Nikhilpranesh/-Pipeline-RCA-Bot
 cd pipeline-failure-rca-bot
 
 ----------------------------------------------------------
