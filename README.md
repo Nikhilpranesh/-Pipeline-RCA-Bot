@@ -1,164 +1,325 @@
-README
+# 🚀 Pipeline Failure RCA Bot
 
-PROJECT TITLE
-Pipeline Failure RCA Bot
+An AI-powered Root Cause Analysis (RCA) platform built using MERN Stack and Grok AI to automatically investigate pipeline failures, analyze logs, compare successful executions, review Git changes, and generate intelligent RCA reports.
 
-==========================================================
-ARCHITECTURE OVERVIEW
-==========================================================
+---
 
-Pipeline Failure RCA Bot is an AI-powered Root Cause Analysis (RCA) platform that automatically investigates failed ETL jobs, scheduled tasks, and data processing pipelines.
+# 👥 Team Information
 
-The system analyzes failure logs, compares them with previous successful executions, examines recent Git code changes, and uses Grok AI to generate detailed RCA reports with recommended solutions.
+## Team Name
 
-The primary objective is to reduce manual troubleshooting efforts, improve incident resolution time, and increase pipeline reliability.
+Team 18
 
-----------------------------------------------------------
-SYSTEM ARCHITECTURE
-----------------------------------------------------------
+## Team Number
+
+18 
+
+## Team Members
+
+* Naresh S
+* Nikhil Pranesh KS
+* Nigun Karthi R
+* Naveen Surya V
+
+---
+
+# 🌐 Deliverable Links
+
+## Demo Video
+
+Demo Link: Add your Loom or YouTube video link here.
+
+## GitHub Repository
+
+GitHub Repository Link: https://github.com/Nikhilpranesh/-Pipeline-RCA-Bot
+
+---
+
+# 📌 Project Overview
+
+Pipeline Failure RCA Bot is an AI-powered support system designed to automate Root Cause Analysis (RCA) for failed ETL jobs, scheduled tasks, and data processing pipelines.
+
+When a pipeline fails, engineers usually spend significant time analyzing logs, comparing previous executions, and reviewing code changes to identify the issue.
+
+This system automates that process by using:
+
+* Log Comparison
+* Git Change Analysis
+* AI-Powered Reasoning (Grok AI)
+* RCA Report Generation
+* Failure Investigation Automation
+
+The platform reduces manual effort and improves incident resolution time.
+
+---
+
+# ✨ Features
+
+## 🔐 User Authentication
+
+* User Registration
+* User Login
+* JWT Authentication
+* Secure Password Hashing
+
+---
+
+## 📂 Pipeline Management
+
+* Create Pipeline
+* View Pipelines
+* Update Pipeline Details
+* Delete Pipelines
+
+---
+
+## 📤 Log Upload Module
+
+Users can upload:
+
+* Success Logs
+* Failure Logs
+
+Features:
+
+* Secure File Upload
+* Log Storage
+* Log Retrieval
+* Log Management
+
+---
+
+## 🔍 Log Comparison Engine
+
+Automatically compares:
+
+* Success Logs
+* Failure Logs
+
+Detects:
+
+* Missing Execution Steps
+* New Error Messages
+* Runtime Differences
+* Unexpected Failures
+
+---
+
+## 📝 Git Change Analysis
+
+Analyzes:
+
+* Recent Commits
+* Modified Files
+* Added Code
+* Removed Code
+* Configuration Changes
+
+Uses:
+
+* Git Diff
+* Commit History
+
+---
+
+## 🤖 AI-Powered RCA Generation
+
+Powered by Grok AI.
+
+The system generates:
+
+* Root Cause
+* Impact Analysis
+* Confidence Score
+* Recommended Fixes
+
+Example:
+
+Root Cause:
+Database schema mismatch detected.
+
+Impact:
+Data transformation failed.
+
+Confidence:
+95%
+
+Recommendation:
+Update ETL mapping configuration and retry.
+
+---
+
+## 📊 Dashboard Analytics
+
+Displays:
+
+* Total Pipelines
+* Successful Runs
+* Failed Runs
+* Failure Trends
+* Success Rate
+* Common Error Categories
+
+---
+
+## 📄 RCA Report Management
+
+* Generate RCA Reports
+* Store RCA History
+* Download PDF Reports
+
+---
+
+## 📧 Notification System
+
+* Failure Alerts
+* RCA Generation Alerts
+* Email Notifications
+
+---
+
+# 🛠 Technology Stack
+
+| Category          | Technology          |
+| ----------------- | ------------------- |
+| Frontend          | React.js            |
+| Backend           | Node.js, Express.js |
+| Database          | MongoDB Atlas       |
+| Authentication    | JWT, bcrypt         |
+| AI Model          | Grok AI             |
+| File Upload       | Multer              |
+| Git Analysis      | simple-git          |
+| Report Generation | PDFKit              |
+| Charts            | Recharts            |
+| API Communication | Axios               |
+
+---
+
+# 📁 Project Structure
+
+Pipeline-Failure-RCA-Bot/
+
+├── frontend/
+
+│ ├── public/
+
+│ ├── src/
+
+│ │ ├── components/
+
+│ │ ├── pages/
+
+│ │ ├── services/
+
+│ │ ├── routes/
+
+│ │ └── context/
+
+│
+
+├── backend/
+
+│ ├── controllers/
+
+│ ├── models/
+
+│ ├── routes/
+
+│ ├── middleware/
+
+│ ├── services/
+
+│ ├── uploads/
+
+│ ├── utils/
+
+│ └── config/
+
+│
+
+├── README.md
+
+└── package.json
+
+---
+
+# 🏗 Architecture Diagram
 
 User
-  |
-  V
+
+↓
+
 React Frontend
-  |
-  V
+
+↓
+
 Express Backend
-  |
-  +----------------------+
-  |                      |
-  V                      V
 
-Log Analyzer       Git Analyzer
-  |                      |
-  +----------+-----------+
-             |
-             V
-        Grok AI Engine
-             |
-             V
-      RCA Report Generator
-             |
-             V
-          MongoDB
+↓
 
-==========================================================
-TECHNOLOGY STACK
-==========================================================
+Log Comparison Engine
 
-Frontend:
-- React.js
-- React Router
-- Axios
-- Tailwind CSS
-- Recharts
+↓
 
-Backend:
-- Node.js
-- Express.js
+Git Analysis Engine
 
-Database:
-- MongoDB Atlas
-- Mongoose
+↓
 
-Authentication:
-- JWT
-- bcrypt
+Grok AI Processing
 
-AI Integration:
-- Grok AI API
+↓
 
-File Upload:
-- Multer
+RCA Report Generator
 
-Git Analysis:
-- simple-git
+↓
 
-Report Generation:
-- PDFKit
+MongoDB Storage
 
-==========================================================
-FEATURES
-==========================================================
+↓
 
-1. User Authentication
-   - Registration
-   - Login
-   - JWT Authentication
-   - Password Encryption
+Results Displayed to User
 
-2. Pipeline Management
-   - Create Pipeline
-   - View Pipelines
-   - Update Pipelines
-   - Delete Pipelines
+---
 
-3. Log Upload System
-   - Upload Success Logs
-   - Upload Failure Logs
-   - View Uploaded Logs
+# 🔄 System Workflow
 
-4. Log Comparison Engine
-   - Compare Success and Failure Logs
-   - Detect Missing Steps
-   - Identify New Errors
-   - Highlight Execution Differences
+1. User logs into the application.
+2. User creates a pipeline.
+3. User uploads Success Log and Failure Log.
+4. System compares both logs.
+5. Git Analyzer retrieves recent code changes.
+6. Log differences and Git changes are sent to Grok AI.
+7. Grok AI generates:
 
-5. Git Change Analysis
-   - Analyze Recent Commits
-   - Retrieve Git Differences
-   - Detect Modified Files
+   * Root Cause
+   * Impact Analysis
+   * Confidence Score
+   * Recommendation
+8. RCA report is stored in MongoDB.
+9. Results are displayed on the dashboard.
+10. User can download the RCA report as PDF.
 
-6. AI-Powered RCA Generation
-   - Root Cause Identification
-   - Impact Analysis
-   - Confidence Score
-   - Recommended Fixes
+---
 
-7. Dashboard Analytics
-   - Total Pipelines
-   - Successful Runs
-   - Failed Runs
-   - Failure Trends
+# 🚀 Setup Instructions
 
-8. RCA Reports
-   - View Reports
-   - Download PDF Reports
-   - Historical RCA Tracking
+## Clone Repository
 
-==========================================================
-SETUP INSTRUCTIONS
-==========================================================
-
-PREREQUISITES
-
-Install the following:
-
-- Node.js (v18+)
-- npm
-- MongoDB Atlas Account
-- Git
-- Grok AI API Key
-
-----------------------------------------------------------
-STEP 1: CLONE REPOSITORY
-----------------------------------------------------------
-
-git clone https://github.com/your-username/pipeline-failure-rca-bot.git
+git clone https://github.com/Nikhilpranesh/-Pipeline-RCA-Bot
 
 cd pipeline-failure-rca-bot
 
-----------------------------------------------------------
-STEP 2: BACKEND SETUP
-----------------------------------------------------------
+---
+
+## Backend Setup
 
 cd backend
 
-Install dependencies:
+Install Dependencies:
 
 npm install
 
-Create a .env file inside backend folder:
+Create .env File:
 
 PORT=5000
 
@@ -170,39 +331,41 @@ GROK_API_KEY=your_grok_api_key
 
 GROK_MODEL=grok-3
 
-GIT_REPO_PATH=your_local_git_repository
-
-Start backend server:
+Start Backend:
 
 npm run dev
 
-Backend URL:
+---
 
-http://localhost:5000
-
-----------------------------------------------------------
-STEP 3: FRONTEND SETUP
-----------------------------------------------------------
+## Frontend Setup
 
 cd frontend
 
-Install dependencies:
+Install Dependencies:
 
 npm install
 
-Start frontend:
+Start Frontend:
 
 npm start
 
-Frontend URL:
+---
+
+## Application URLs
+
+Frontend:
 
 http://localhost:3000
 
-==========================================================
-RUN INSTRUCTIONS
-==========================================================
+Backend:
 
-STEP 1: START BACKEND
+http://localhost:5000
+
+---
+
+# ▶ Run Instructions
+
+## Start Backend
 
 cd backend
 
@@ -211,13 +374,12 @@ npm run dev
 Expected Output:
 
 Server running on port 5000
+
 MongoDB Connected Successfully
 
-----------------------------------------------------------
+---
 
-STEP 2: START FRONTEND
-
-Open another terminal
+## Start Frontend
 
 cd frontend
 
@@ -227,140 +389,186 @@ Expected Output:
 
 Compiled Successfully
 
-Local:
+Local: http://localhost:3000
+
+---
+
+## Access Application
+
+Open Browser:
+
 http://localhost:3000
 
-----------------------------------------------------------
+---
 
-STEP 3: ACCESS APPLICATION
+## Generate RCA
 
-Open browser and navigate to:
+1. Login
+2. Create Pipeline
+3. Upload success.log
+4. Upload failure.log
+5. Click Generate RCA
+6. View RCA Report
+7. Download PDF
 
-http://localhost:3000
+---
 
-----------------------------------------------------------
+# 📋 Sample Input
 
-STEP 4: LOGIN
+Failure Log:
 
-- Register a new account
-- Login with credentials
+Database connected
 
-----------------------------------------------------------
+Fetched records
 
-STEP 5: CREATE PIPELINE
+Transformation Error:
 
-Provide:
+Column 'customer_age' not found
 
-- Pipeline Name
-- Description
+Git Diff:
 
-----------------------------------------------------------
+customer_age → age
 
-STEP 6: UPLOAD LOG FILES
+---
 
-Upload:
-
-- success.log
-- failure.log
-
-----------------------------------------------------------
-
-STEP 7: GENERATE RCA
-
-Click "Generate RCA"
-
-The system will:
-
-- Compare Logs
-- Analyze Git Changes
-- Send Context to Grok AI
-- Generate RCA Report
-
-----------------------------------------------------------
-
-STEP 8: DOWNLOAD REPORT
-
-View and download RCA report as PDF.
-
-==========================================================
-SAMPLE RCA OUTPUT
-==========================================================
-
-Pipeline Name:
-Customer Data ETL
+# 📋 Expected Output
 
 Root Cause:
-Column 'customer_age' was renamed to 'age'
-in commit a4b5d6.
+
+Column name changed from customer_age to age.
 
 Impact:
-Transformation stage failed due to schema mismatch.
 
-Confidence Score:
+Transformation stage failed.
+
+Confidence:
+
 96%
 
 Recommendation:
-Update ETL mapping configuration and rerun the pipeline.
 
-==========================================================
-ASSUMPTIONS
-==========================================================
+Update ETL mapping configuration and retry pipeline.
 
-1. Users have valid credentials.
+---
 
-2. Success and failure logs are available.
+# 🧠 AI Concepts Used
 
-3. Uploaded logs are in readable text format.
+* Grok AI
+* Prompt Engineering
+* Root Cause Analysis
+* Log Analysis
+* Git Diff Analysis
+* AI-Based Reasoning
+* Structured JSON Output
+* Incident Investigation Automation
 
-4. Git repository access is available.
+---
 
-5. Grok AI API is properly configured.
+# ⚠ Assumptions
 
-6. MongoDB Atlas is accessible.
+* Users have valid credentials.
+* Success logs are available for comparison.
+* Failure logs are uploaded correctly.
+* Git repository access is available.
+* Grok AI API is configured properly.
+* MongoDB Atlas is operational.
+* Internet connection is available for AI communication.
 
-7. System has permissions to read logs and repository files.
+---
 
-8. Internet connectivity is available for AI communication.
+# ⚠ Limitations
 
-==========================================================
-LIMITATIONS
-==========================================================
+* RCA accuracy depends on log quality.
+* AI recommendations may require human validation.
+* Large log files may impact performance.
+* Git analysis requires repository access.
+* Real-time log monitoring is not supported.
+* Automatic issue fixing is not implemented.
 
-1. RCA accuracy depends on the quality of uploaded logs.
+---
 
-2. AI-generated recommendations may require human validation.
+# 🔮 Future Enhancements
 
-3. Extremely large logs may increase processing time.
+* Real-Time Log Monitoring
+* Similar Failure Detection
+* AI Chat Assistant
+* Failure Prediction Engine
+* Jenkins Integration
+* GitHub Actions Integration
+* Docker Deployment
+* Kubernetes Deployment
+* ELK Stack Integration
+* Slack Notifications
+* Microsoft Teams Notifications
+* Automated Retry Execution
 
-4. Git analysis is limited to accessible repositories.
+---
 
-5. Real-time log monitoring is not supported.
+# 🤖 AI Usage Note
 
-6. Automatic issue fixing is not implemented.
+## AI Tools Used
 
-7. Confidence scores are AI estimates and not guaranteed.
+* Grok AI
+* ChatGPT
+* Claude AI
+* GitHub Copilot
 
-8. Failure prediction before execution is outside the scope of the current version.
+## What AI Helped With
 
-==========================================================
-FUTURE ENHANCEMENTS
-==========================================================
+* Frontend Development
+* Backend API Development
+* Prompt Engineering
+* MongoDB Integration
+* Log Comparison Logic
+* Git Analysis Logic
+* Debugging
+* Documentation
 
-- Real-Time Log Monitoring
-- Similar Failure Detection
-- AI Chat Assistant
-- Failure Prediction Engine
-- Jenkins Integration
-- GitHub Actions Integration
-- Docker Deployment
-- Kubernetes Deployment
-- ELK Stack Integration
-- Slack Notifications
-- Microsoft Teams Notifications
-- Automated Retry Execution
+## What AI Got Wrong
 
-==========================================================
-CONCLUSION
-==========================================================
+* Initial API Integration Issues
+* Incorrect Log Parsing Logic
+* UI Alignment Problems
+* Git Diff Processing Errors
 
-Pipeline Failure RCA Bot combines log comparison, Git change analysis, and Grok AI-powered reasoning to automatically identify the most likely causes of pipeline failures. The platform reduces manual troubleshooting effort, accelerates incident resolution, improves operational visibility, and enhances the reliability of modern data processing workflows.
+## Human Corrections
+
+* Improved Error Handling
+* Refined Prompt Structure
+* Fixed API Integration
+* Enhanced Dashboard Design
+* Optimized RCA Generation Flow
+
+---
+
+# 🎥 Project Demonstration Video
+
+Demo Link:
+
+Add your video link here.
+
+The demonstration includes:
+
+* Project Overview
+* Authentication
+* Pipeline Creation
+* Log Upload
+* Log Comparison
+* Git Analysis
+* Grok AI RCA Generation
+* Dashboard Analytics
+* PDF Report Generation
+
+---
+
+# ✅ Project Outcome
+
+Pipeline Failure RCA Bot successfully automates root cause analysis by combining log comparison, Git change tracking, and Grok AI-powered reasoning. The system reduces manual troubleshooting effort, accelerates incident resolution, and improves the reliability of data processing pipelines.
+
+---
+
+# 👨‍💻 Developed By
+
+Team Number – 31
+
+Project: Pipeline Failure RCA Bot
