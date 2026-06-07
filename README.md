@@ -1,5 +1,8 @@
+README
+
 PROJECT TITLE
 Pipeline Failure RCA Bot
+
 ==========================================================
 ARCHITECTURE OVERVIEW
 ==========================================================
@@ -13,14 +16,15 @@ The primary objective is to reduce manual troubleshooting efforts, improve incid
 ----------------------------------------------------------
 SYSTEM ARCHITECTURE
 ----------------------------------------------------------
-  User
-  	  |
-  	  V
-    React Frontend
-  	  |
-  	  V
-    Express Backend
-    	  |
+
+User
+  |
+  V
+React Frontend
+  |
+  V
+Express Backend
+  |
   +----------------------+
   |                      |
   V                      V
@@ -41,6 +45,7 @@ Log Analyzer       Git Analyzer
 ==========================================================
 TECHNOLOGY STACK
 ==========================================================
+
 Frontend:
 - React.js
 - React Router
@@ -53,12 +58,13 @@ Backend:
 - Express.js
 
 Database:
-- MongoDB
+- MongoDB Atlas
 - Mongoose
 
 Authentication:
 - JWT
 - bcrypt
+
 AI Integration:
 - Grok AI API
 
@@ -70,9 +76,11 @@ Git Analysis:
 
 Report Generation:
 - PDFKit
+
 ==========================================================
 FEATURES
 ==========================================================
+
 1. User Authentication
    - Registration
    - Login
@@ -95,6 +103,7 @@ FEATURES
    - Detect Missing Steps
    - Identify New Errors
    - Highlight Execution Differences
+
 5. Git Change Analysis
    - Analyze Recent Commits
    - Retrieve Git Differences
@@ -116,28 +125,33 @@ FEATURES
    - View Reports
    - Download PDF Reports
    - Historical RCA Tracking
+
 ==========================================================
 SETUP INSTRUCTIONS
 ==========================================================
+
 PREREQUISITES
 
 Install the following:
 
 - Node.js (v18+)
 - npm
-- MongoDB
+- MongoDB Atlas Account
 - Git
 - Grok AI API Key
+
 ----------------------------------------------------------
 STEP 1: CLONE REPOSITORY
 ----------------------------------------------------------
 
-git clone https://github.com/Nikhilpranesh/-Pipeline-RCA-Bot
+git clone https://github.com/your-username/pipeline-failure-rca-bot.git
+
 cd pipeline-failure-rca-bot
 
 ----------------------------------------------------------
 STEP 2: BACKEND SETUP
 ----------------------------------------------------------
+
 cd backend
 
 Install dependencies:
@@ -161,6 +175,7 @@ GIT_REPO_PATH=your_local_git_repository
 Start backend server:
 
 npm run dev
+
 Backend URL:
 
 http://localhost:5000
@@ -168,6 +183,7 @@ http://localhost:5000
 ----------------------------------------------------------
 STEP 3: FRONTEND SETUP
 ----------------------------------------------------------
+
 cd frontend
 
 Install dependencies:
@@ -198,6 +214,7 @@ Server running on port 5000
 MongoDB Connected Successfully
 
 ----------------------------------------------------------
+
 STEP 2: START FRONTEND
 
 Open another terminal
@@ -212,6 +229,7 @@ Compiled Successfully
 
 Local:
 http://localhost:3000
+
 ----------------------------------------------------------
 
 STEP 3: ACCESS APPLICATION
@@ -245,7 +263,7 @@ Upload:
 - success.log
 - failure.log
 
----------------------------------------------------------
+----------------------------------------------------------
 
 STEP 7: GENERATE RCA
 
@@ -259,6 +277,7 @@ The system will:
 - Generate RCA Report
 
 ----------------------------------------------------------
+
 STEP 8: DOWNLOAD REPORT
 
 View and download RCA report as PDF.
@@ -286,6 +305,7 @@ Update ETL mapping configuration and rerun the pipeline.
 ==========================================================
 ASSUMPTIONS
 ==========================================================
+
 1. Users have valid credentials.
 
 2. Success and failure logs are available.
@@ -296,7 +316,7 @@ ASSUMPTIONS
 
 5. Grok AI API is properly configured.
 
-6. MongoDB  is accessible.
+6. MongoDB Atlas is accessible.
 
 7. System has permissions to read logs and repository files.
 
@@ -320,7 +340,7 @@ LIMITATIONS
 
 7. Confidence scores are AI estimates and not guaranteed.
 
-8. Failure prediction before execution is outside the scope of the current version
+8. Failure prediction before execution is outside the scope of the current version.
 
 ==========================================================
 FUTURE ENHANCEMENTS
@@ -342,9 +362,5 @@ FUTURE ENHANCEMENTS
 ==========================================================
 CONCLUSION
 ==========================================================
-Pipeline Failure RCA Bot combines log comparison, Git change analysis, and Grok AI-powered reasoning to automatically 
-identify the most likely causes of pipeline failures. The platform reduces manual troubleshooting effort, accelerates incident resolution,
-improves operational visibility, and enhances the reliability of modern data processing workflows.
 
-
-
+Pipeline Failure RCA Bot combines log comparison, Git change analysis, and Grok AI-powered reasoning to automatically identify the most likely causes of pipeline failures. The platform reduces manual troubleshooting effort, accelerates incident resolution, improves operational visibility, and enhances the reliability of modern data processing workflows.
