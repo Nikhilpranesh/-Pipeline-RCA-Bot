@@ -19,8 +19,6 @@ Team 18
 * Naresh S
 * Nikhil Pranesh KS
 * Nigun Karthi R
-* Naveen Surya V
-
 ---
 
 # 🌐 Deliverable Links
